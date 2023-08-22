@@ -11,7 +11,7 @@ export function validateEmail() {
   });
 }
 
-function emailValidation() {
+export function emailValidation() {
   if (email.validity.valueMissing) {
     emailError.textContent = "Email is required";
   } else if (email.validity.typeMismatch) {
