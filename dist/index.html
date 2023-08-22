@@ -6,5 +6,47 @@
     <script src="./main.js" defer></script>
     <title>Form Validation</title>
   </head>
-  <body></body>
+  <body>
+    <form novalidate>
+      <div>
+        <label for="email">Email</label
+        ><input id="email" type="email" required /><span></span>
+      </div>
+      <div>
+        <label for="country">Country</label
+        ><select id="country" required>
+          <option value="">-Select an option-</option>
+          <option value="ch">Switzerland</option>
+          <option value="fr">France</option>
+          <option value="de">Germany</option>
+          <option value="nl">The Netherlands</option></select
+        ><span></span>
+      </div>
+      <div>
+        <label for="zip">ZIP</label
+        ><input id="zip" type="text" required /><span></span>
+      </div>
+      <div>
+        <label for="password">Password</label
+        ><input
+          id="password"
+          type="password"
+          required
+          minlength="5"
+          maxlength="8"
+        /><span></span>
+      </div>
+      <div>
+        <label for="conform-password">Conform Password</label
+        ><input
+          id="conform-password"
+          type="password"
+          required
+          minlength="5"
+          maxlength="8"
+        /><span></span>
+      </div>
+      <button>Submit</button>
+    </form>
+  </body>
 </html>
