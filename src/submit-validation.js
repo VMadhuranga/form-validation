@@ -1,6 +1,10 @@
 import { emailValidation } from "./email-validation";
 import { countryValidation } from "./country-validation";
 import { zipValidation } from "./zip-validation";
+import {
+  passwordValidation,
+  confirmPasswordValidation,
+} from "./password-validation";
 
 const form = document.querySelector("#form");
 
@@ -10,6 +14,8 @@ export function validateOnSubmit() {
       emailValidation();
       countryValidation();
       zipValidation();
+      passwordValidation();
+      confirmPasswordValidation();
 
       e.preventDefault();
     }
