@@ -1,3 +1,5 @@
+import { checkZIP } from "./zip-validation";
+
 export const country = document.querySelector("#country");
 const countryError = document.querySelector("#country + span");
 
@@ -8,6 +10,8 @@ export function validateCountry() {
     } else {
       countryError.textContent = "";
     }
+
+    checkZIP();
   });
 }
 

@@ -13,6 +13,8 @@ export function validateZip() {
     } else {
       zipError.textContent = "";
     }
+
+    checkZIP();
   });
 }
 
@@ -22,7 +24,7 @@ export function zipValidation() {
   }
 }
 
-function checkZIP() {
+export function checkZIP() {
   const constraints = {
     ch: [
       "^(CH-)?\\d{4}$",
@@ -51,8 +53,3 @@ function checkZIP() {
     zipError.textContent = constraints[country.value][1];
   }
 }
-
-window.onload = () => {
-  country.onchange = checkZIP;
-  zip.oninput = checkZIP;
-};
